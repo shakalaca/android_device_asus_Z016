@@ -1,0 +1,24 @@
+on init
+    # Load Tuxera exfat module
+    insmod /system/lib/modules/texfat.ko
+
+    mkdir /factory
+    wait /dev/block/bootdevice/by-name/factory
+    mount ext4 /dev/block/bootdevice/by-name/factory /factory nosuid nodev barrier=1
+
+on fs
+    chmod 0664 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+
+on property:ro.crypto.state=encrypted
+    start qseecomd
+
+service qseecomd /system/bin/qseecomd
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0

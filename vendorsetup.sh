@@ -1,0 +1,2 @@
+add_lunch_combo omni_zs570kl-userdebug
+add_lunch_combo omni_zs570kl-eng
