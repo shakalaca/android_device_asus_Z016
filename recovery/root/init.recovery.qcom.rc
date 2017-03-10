@@ -1,6 +1,5 @@
 on init
-    # Load Tuxera exfat module
-    insmod /system/lib/modules/texfat.ko
+    insmod /sbin/texfat.ko
 
     mkdir /factory
     wait /dev/block/bootdevice/by-name/factory
