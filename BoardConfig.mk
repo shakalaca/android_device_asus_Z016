@@ -64,8 +64,27 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := "/sys/devices/soc/900000.qcom\x2cmdss_mdp/900000.qcom\x2cmdss_mdp:qcom\x2cmdss_fb_primary/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 
-#TARGET_RECOVERY_DEVICE_MODULES := libbinder libgui libui libEGL libGLES_trace libGLESv2 libprotobuf-cpp-lite libsync
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/system/lib64/libbinder.so $(OUT)/system/lib64/libgui.so $(OUT)/system/lib64/libui.so $(OUT)/system/lib64/libEGL.so $(OUT)/system/lib64/libGLES_trace.so $(OUT)/system/lib64/libGLESv2.so $(OUT)/system/lib64/libprotobuf-cpp-lite.so $(OUT)/system/lib64/libsync.so
+TARGET_RECOVERY_DEVICE_MODULES := \
+    libbinder \
+    libgui \
+    libui \
+    libEGL \
+    libGLES_trace \
+    libGLESv2 \
+    libprotobuf-cpp-lite \
+    libsync \
+    qseecomd
+
+TW_RECOVERY_ADDITIONAL_RELINK_FILES := \
+    $(OUT)/system/lib64/libbinder.so \
+    $(OUT)/system/lib64/libgui.so \
+    $(OUT)/system/lib64/libui.so \
+    $(OUT)/system/lib64/libEGL.so \
+    $(OUT)/system/lib64/libGLES_trace.so \
+    $(OUT)/system/lib64/libGLESv2.so \
+    $(OUT)/system/lib64/libprotobuf-cpp-lite.so \
+    $(OUT)/system/lib64/libsync.so \
+    $(OUT)/system/bin/qseecomd
 
 #TARGET_UNIFIED_DEVICE := true
 #TARGET_INIT_VENDOR_LIB := libinit_zs570kl
