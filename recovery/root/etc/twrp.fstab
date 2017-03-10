@@ -9,9 +9,9 @@
 /misc           emmc      /dev/block/bootdevice/by-name/misc                 flags=display="Misc";backup=1
 
 /factory        ext4      /dev/block/bootdevice/by-name/factory              flags=display="Factory";backup=1
-/firmware       vfat      /dev/block/bootdevice/by-name/modem                flags=display="Modem firmware";backup=1
+/firmware       emmc      /dev/block/bootdevice/by-name/mdtp                 flags=display="Modem firmware";backup=1
 /persist        ext4      /dev/block/bootdevice/by-name/persist              flags=display="Persist";backup=1
 /dsp            ext4      /dev/block/bootdevice/by-name/dsp                  flags=display="DSP";backup=1
 
-/external_sd    auto      /dev/block/mmcblk1p1    /dev/block/mmcblk1         flags=display="MicroSD";storage;wipeingui;removable
-/usb-otg        auto      /dev/block/sda1         /dev/block/sda             flags=display="USB OTG";storage;wipeingui;removable
+/external_sd    auto      /dev/block/mmcblk0p1    /dev/block/mmcblk0         flags=display="MicroSD";wipeingui;removable;backup=0
+/usb-otg        auto      /dev/block/sdg1         /dev/block/sdg             flags=display="USB OTG";storage;wipeingui;removable;backup=0
