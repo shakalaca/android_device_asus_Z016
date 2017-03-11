@@ -21,11 +21,17 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/asus/zs570kl/recovery/kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80008000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000
+
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_APPEND_DTB := true
+TARGET_KERNEL_CONFIG := zs570kl-perf_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_PREBUILT_KERNEL := device/asus/zs570kl/recovery/kernel
 
 TARGET_LDPRELOAD := libNimsWrap.so
 
@@ -48,6 +54,7 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
 TW_NO_EXFAT_FUSE := true
+TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 RECOVERY_SDCARD_ON_DATA := true
