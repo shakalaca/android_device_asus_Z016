@@ -1,0 +1,2 @@
+allow thermal-engine sysfs_kgsl:file { read open getattr };
+allow thermal-engine kmsg_device:chr_file { write open };

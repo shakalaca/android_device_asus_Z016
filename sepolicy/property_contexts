@@ -1,0 +1,46 @@
+ro.adb.on                     u:object_r:customize_prop:s0
+ro.auth.on                    u:object_r:customize_prop:s0
+ro.factory.adbon              u:object_r:customize_prop:s0
+factory.adbon                 u:object_r:customize_prop:s0
+persist.adbon                 u:object_r:system_prop:s0
+ro.btmac                      u:object_r:customize_prop:s0
+ro.wifimac                    u:object_r:customize_prop:s0
+ro.config.idcode              u:object_r:customize_prop:s0
+ro.config.versatility         u:object_r:customize_prop:s0
+ro.config.CID                 u:object_r:customize_prop:s0
+ro.config.SIM_ID              u:object_r:customize_prop:s0
+ro.isn                        u:object_r:customize_prop:s0
+ro.fsn                        u:object_r:customize_prop:s0
+ro.config.packingcode         u:object_r:customize_prop:s0
+ro.config.revenuecountry      u:object_r:customize_prop:s0
+ro.cpufreq                    u:object_r:customize_prop:s0
+ro.memsize                    u:object_r:customize_prop:s0
+
+#ASUS storage property
+asus.storage                  u:object_r:customize_prop:s0
+
+atd.voucher.               u:object_r:VerifyVouchers_prop:s0
+atd.keybox.ready           u:object_r:VerifyVouchers_prop:s0
+gps.version.driver	   u:object_r:system_prop:s0
+atd.hdcp.ready             u:object_r:VerifyVouchers_prop:s0
+
+# TTY and HAC
+ro.asus.phone.tty             u:object_r:customize_prop:s0
+ro.asus.phone.hac             u:object_r:customize_prop:s0
+
+#audio wizard property
+audio.wizard.video         u:object_r:system_prop:s0
+# Audio
+use.audio.                  u:object_r:audio_prop:s0
+
+# Allow AsyncRingtonePlayer to set system property
+gsm.sim.phone              u:object_r:radio_prop:s0
+
+# light
+persist.light.             u:object_r:light_prop:s0
+
+# fingerprint
+persist.sys.fp.            u:object_r:fingerprintd_prop:s0
+
+# gps
+persist.asus.gps.          u:object_r:asus_gps_prop:s0

@@ -1,0 +1,17 @@
+type dit_data_file, file_type;
+type rgb_device, dev_type;
+type proc_asus_flash, file_type;
+
+allow mm-qcamerad factory_file:file { read open write getattr lock };
+allow mm-qcamerad factory_file:dir { search };
+allow mm-qcamerad rgb_device:chr_file { read write open ioctl };
+allow mm-qcamerad shell_exec:file { read open execute_no_trans };
+
+allow mm-qcamerad dit_data_file:dir { write remove_name add_name search };
+allow mm-qcamerad dit_data_file:sock_file { setattr getattr create unlink };
+allow mm-qcamerad toolbox_exec:file { getattr execute read open execute_no_trans };
+allow mm-qcamerad shell_exec:file { execute getattr };
+allow mm-qcamerad customize_prop:file { read };
+
+allow cameraserver system_file:file { lock };
+allow cameraserver proc_asus_flash:file { read write open };

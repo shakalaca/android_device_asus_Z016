@@ -1,0 +1,36 @@
+# Vouchers
+/system/bin/customize_service_late               u:object_r:VerifyVouchers_exec:s0
+/system/bin/customize_service                    u:object_r:customize_service_exec:s0
+/system/bin/HDCP_Validate                        u:object_r:VerifyVouchers_exec:s0
+/system/bin/keybox_selftest                      u:object_r:VerifyVouchers_exec:s0
+/system/bin/VerifyVouchers                       u:object_r:VerifyVouchers_exec:s0
+
+# Fingerprint
+#/data/misc/stargate(/.*)?                        u:object_r:vfmService_data_file:s0
+/data/validity(/.*)?                             u:object_r:fp_data_file:s0
+/dev/vfsspi                                      u:object_r:fp_device:s0
+/system/bin/vfmService                           u:object_r:vfmService_exec:s0
+/dev/validity(/.*)?                              u:object_r:fp_device:s0
+
+# ssr
+/system/xbin/ssr_cfg.sh                          u:object_r:ssr_cfg_exec:s0
+/system/xbin/ssr_ui.sh                           u:object_r:ssr_ui_exec:s0
+
+# Factory
+/factory(/.*)?                                   u:object_r:factory_file:s0
+/asusfw(/.*)?                                    u:object_r:factory_file:s0
+/dev/block/bootdevice/by-name/factory            u:object_r:factory_block_device:s0
+
+# Camera
+/data/dit_file(/.*)?                             u:object_r:dit_data_file:s0
+/dev/cm3323ee                                    u:object_r:rgb_device:s0
+
+# log
+/data/misc/netmgr(/.*)?                          u:object_r:netmgr_log:s0
+
+# cpuset
+/dev/cpuset(/.*)?                                u:object_r:cpuset_device:s0
+
+# gesture
+/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/gesturemode  u:object_r:sysfs_gesture:s0
+/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input2/dclickmode  u:object_r:sysfs_gesture:s0

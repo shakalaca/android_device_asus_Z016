@@ -1,0 +1,84 @@
+import init.asus.logtool.rc
+
+on early-init
+    mkdir /factory 0775 system system
+
+    #add mountpoint for asus demoapp
+    mkdir /ADF 0775 system system
+    mkdir /APD 0775 system system
+
+on fs
+    wait /dev/block/bootdevice/by-name/factory
+    mount ext4 /dev/block/bootdevice/by-name/factory /factory nosuid nodev barrier=1
+    restorecon /factory
+    chown system system /factory
+    restorecon /data/ramdump
+
+    #add adf apd for asus demoapp
+    wait /dev/block/bootdevice/by-name/ADF
+    mount ext4 /dev/block/bootdevice/by-name/ADF /ADF rw
+    chown system system /ADF
+    chmod 0775 /ADF
+    restorecon_recursive /ADF
+    wait /dev/block/bootdevice/by-name/APD
+    mount ext4 /dev/block/bootdevice/by-name/APD /APD rw
+    chown system system /APD
+    chmod 0775 /APD
+    restorecon_recursive /APD
+    #add HW JPEG encoder for asus camera app
+    chmod 0666 /dev/jpeg0
+    chmod 0666 /dev/jpeg2
+    chmod 0666 /dev/jpeg3
+
+#add for asus demoapp
+on property:persist.sys.enableAPD=1
+    wait /dev/block/bootdevice/by-name/APD
+    mount ext4 /dev/block/bootdevice/by-name/APD /APD rw
+    chown system system /APD
+    chmod 0775 /APD
+    restorecon_recursive /APD
+
+service umount_apd /system/bin/umount_apd.sh
+    disabled
+    user root
+    group root
+    oneshot
+
+on property:persist.sys.enableAPD=0
+    start umount_apd
+
+#   Disable demoapp by default
+on boot
+    setprop persist.sys.enableAPD 0
+    # enable icepower audio effect on a2dp
+    # setprop audio.effect.a2dp.enable 1
+    # set AudioWizard default mode to SMART
+    setprop audio.wizard.default.mode "smart"
+
+service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+
+service bugreportplus /system/bin/dumpstate -d -p -B -P -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+
+# ASUS_BSP +++, ChungYi. Tune CPU to performance when camera open
+# When camera close
+on property:persist.camera.cpufreq=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
+# When camera open 
+on property:persist.camera.cpufreq=0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
+# ASUS_BSP ---, ChungYi.
+
+service SetAsusPowerMode /system/bin/sh /system/etc/asuspowermode.sh
+    disabled
+    oneshot
+
+on property:sys.asus.power.mode=*
+    start SetAsusPowerMode

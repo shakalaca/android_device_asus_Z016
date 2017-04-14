@@ -1,0 +1,13 @@
+import init.asus.rc
+import init.asus.laser.rc
+
+on post-fs-data
+
+    # ASUS BSP Victor: Add for DIT
+    mkdir /data/dit_file 0777 root root
+
+	symlink /sys/bus/platform/devices/soc:hall_sensor/hall_sensor/status /data/data/hallsensor_status
+	chmod 0660 /data/data/hallsensor_status
+	chown system shell /data/data/hallsensor_status
+	chown shell camera /dev/cm3323ee
+	chmod 0660 /dev/cm3323ee

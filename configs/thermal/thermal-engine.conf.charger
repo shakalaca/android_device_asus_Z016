@@ -1,0 +1,50 @@
+# File empty by default.
+# Replace contents of this file with custom configuration.
+# SENSOR : ALIAS
+
+#Conf file: /system/etc/thermal-engine.conf
+
+[ASUS_THERMAL_POLICY]
+algo_type monitor
+sampling 1000
+sensor thermal_sensor2
+thresholds     -100
+thresholds_clr -100
+actions        hotplug_3+hotplug_2+cluster0+gpu
+action_info    1+1+302400+133000000
+
+[ASUS_SSCPU0]
+algo_type ss
+sampling 5000
+sensor cpu0
+device cluster0
+set_point 95000
+set_point_clr 90000
+time_constant 16
+
+[ASUS_SSCPU1]
+algo_type ss
+sampling 5000
+sensor cpu1
+device cluster0
+set_point 95000
+set_point_clr 90000
+time_constant 16
+
+[ASUS_SSCPU2]
+algo_type ss
+sampling 5000
+sensor cpu2
+device cluster1
+set_point 95000
+set_point_clr 90000
+time_constant 16
+
+[ASUS_SSCPU3]
+algo_type ss
+sampling 5000
+sensor cpu3
+device cluster1
+set_point 95000
+set_point_clr 90000
+time_constant 16

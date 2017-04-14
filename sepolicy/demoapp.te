@@ -1,0 +1,6 @@
+type demoapp_block_device, dev_type;
+
+# Default type for anything under /APD, /ADF
+type demoapp_file, file_type;
+
+allow init demoapp_file:dir { mounton };

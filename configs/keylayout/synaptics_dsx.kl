@@ -1,0 +1,11 @@
+key 158     BACK                      VIRTUAL
+key 102     HOME                      VIRTUAL
+key 139     APP_SWITCH                VIRTUAL
+key 116     POWER  WAKE               VIRTUAL
+key 143     WAKEUP                    GESTURE
+#key 46      C             WAKE        GESTURE
+#key 18      E             WAKE        GESTURE
+#key 31      S             WAKE        GESTURE
+#key 47      V             WAKE        GESTURE
+#key 17      W             WAKE        GESTURE
+#key 44      Z             WAKE        GESTURE

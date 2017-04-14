@@ -1,0 +1,32 @@
+type vfmService, domain, domain_deprecated;
+type vfmService_exec, exec_type, file_type;
+type vfmService_data_file, file_type;
+type fp_data_file, file_type;
+type fp_device, dev_type;
+
+allow init vfmService_exec:file { getattr };
+
+# vfmService
+init_daemon_domain(vfmService)
+binder_use(vfmService)
+
+allow vfmService tee_device:chr_file { read write open ioctl };
+allow vfmService uhid_device:chr_file { read write open ioctl };
+allow vfmService fp_device:dir { add_name write setattr search };
+allow vfmService fp_device:file { lock create read write open };
+allow vfmService fp_device:chr_file { ioctl read write open };
+allow vfmService fp_device:fifo_file { create read open write lock };
+allow vfmService fp_data_file:dir { search write add_name setattr remove_name read open };
+allow vfmService fp_data_file:file { open read write getattr create lock unlink };
+allow vfmService init:unix_stream_socket { connectto };
+allow vfmService fingerprintd_prop:property_service { set };
+allow vfmService fingerprintd_prop:file { read open getattr };
+allow vfmService fingerprintd_data_file:dir { add_name search write setattr remove_name read open };
+allow vfmService fingerprintd_data_file:file { create write read open getattr lock unlink };
+allow vfmService property_socket:sock_file { write };
+allow vfmService fingerprintd:process { signull };
+
+allow fingerprintd vfmService:process { signull };
+allow fingerprintd fp_device:dir { search };
+allow fingerprintd fp_device:fifo_file { write open read lock };
+allow fingerprintd tee_device:chr_file { read write open ioctl };

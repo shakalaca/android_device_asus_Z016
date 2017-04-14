@@ -1,0 +1,5 @@
+type customize_service_exec, exec_type, file_type;
+type VerifyVouchers_exec, exec_type, file_type;
+
+allow init customize_service_exec:file { getattr };
+allow init VerifyVouchers_exec:file { getattr };

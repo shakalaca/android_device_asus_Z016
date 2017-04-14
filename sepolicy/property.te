@@ -1,0 +1,5 @@
+type customize_prop, property_type;
+type VerifyVouchers_prop, property_type;
+type light_prop, property_type;
+type fingerprintd_prop, property_type;
+type asus_gps_prop, property_type;

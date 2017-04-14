@@ -1,0 +1,4 @@
+type ssr_ui_exec, exec_type, file_type;
+type ssr_cfg_exec, exec_type, file_type;
+
+allow init ssr_cfg_exec:file { getattr };

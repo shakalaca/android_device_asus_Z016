@@ -1,0 +1,146 @@
+on post-fs-data
+# ASUS_BSP +++ LaserFocus
+	chown media shell /proc/driver/LaserFocus_on
+	chown media shell /proc/driver/LaserFocus_value
+	chown system shell /proc/driver/LaserFocus_value_more_info
+	chown system shell /proc/driver/LaserFocus_Status
+	chown media shell /proc/driver/LaserFocus_Status_For_Camera
+	chown system shell /proc/driver/LaserFocus_debug_dump
+	chmod system shell /proc/driver/LaserFocus_register_dump
+	chown media shell /proc/driver/LaserFocus_setK
+	chown media shell /proc/driver/LaserFocus_ProductFamily
+
+	rm /data/data/LaserFocus_on
+	rm /data/data/LaserFocus_value
+	rm /data/data/LaserFocus_value_more_info
+	rm /data/data/LaserFocus_Status
+	rm /data/data/LaserFocus_Status_For_Camera
+	rm /data/data/LaserFocus_debug_dump
+	rm /data/data/LaserFocus_register_dump
+	#rm /data/data/LaserFocus_setK
+	#rm /data/data/LaserFocus_ProductFamily
+
+	symlink /system/bin/LaserFocus_on /data/data/LaserFocus_on
+	symlink /proc/driver/LaserFocus_value /data/data/LaserFocus_value
+	symlink /proc/driver/LaserFocus_value_more_info /data/data/LaserFocus_value_more_info
+	symlink /proc/driver/LaserFocus_Status /data/data/LaserFocus_Status
+	symlink /proc/driver/LaserFocus_Status_For_Camera /data/data/LaserFocus_Status_For_Camera
+	symlink /proc/driver/LaserFocus_debug_dump /data/data/LaserFocus_debug_dump
+	symlink /proc/driver/LaserFocus_register_dump /data/data/LaserFocus_register_dump
+	#symlink /proc/driver/LaserFocus_debug_dump /data/data/LaserFocus_setK
+	#symlink /proc/driver/LaserFocus_register_dump /data/data/LaserFocus_ProductFamily
+	
+	chown shell camera /dev/LaserSensor
+	chmod 0660 /dev/LaserSensor
+	chmod 0660 /data/data/LaserFocus_on
+	chmod 0660 /data/data/LaserFocus_CSCmode
+	chmod 0660 /data/data/LaserFocus_value
+	chmod 0660 /data/data/LaserFocus_value_more_info
+	chmod 0660 /data/data/LaserFocus_Status
+	chmod 0660 /data/data/LaserFocus_Status_For_Camera
+	chmod 0660 /data/data/LaserFocus_debug_dump
+	chmod 0660 /data/data/LaserFocus_register_dump
+	#chmod 0660 /data/data/LaserFocus_setK
+	#chmod 0660 /data/data/LaserFocus_ProductFamily
+
+	chown system shell /data/data/LaserFocus_on
+	chown system shell /data/data/LaserFocus_value
+	chown system shell /data/data/LaserFocus_value_more_info
+	chown system shell /data/data/LaserFocus_Status
+	chown system shell /data/data/LaserFocus_Status_For_Camera
+	chown system shell /data/data/LaserFocus_debug_dump
+	chown system shell /data/data/LaserFocus_register_dump
+	#chown system shell /data/data/LaserFocus_setK
+	#chown system shell /data/data/LaserFocus_ProductFamily
+
+	chown system shell /proc/driver/LaserFocus_CalStart
+	chown system shell /proc/driver/LaserFocus_CSCmode
+	#chown system shell /proc/driver/LaserFocus_CalGetInputData
+	chown system shell /proc/driver/LaserFocus_log_value1
+	chown system shell /proc/driver/LaserFocus_log_value2
+	chown system shell /proc/driver/LaserFocus_log_value3
+	chown system shell /proc/driver/LaserFocus_log_value4
+	chown system shell /proc/driver/LaserFocus_log_value5
+	chown system shell /proc/driver/LaserFocus_log_value6
+	chown system shell /proc/driver/LaserFocus_log_value7
+	chown system shell /proc/driver/LaserFocus_log_value8
+	chown system shell /proc/driver/LaserFocus_log_value9
+	chown system shell /proc/driver/LaserFocus_log_value10
+	chown system shell /proc/driver/LaserFocus_value_check
+
+
+	rm /data/data/LaserFocus_CalStart
+	#rm /data/data/LaserFocus_CalGetInputData
+	rm /data/data/LaserFocus_log_value1
+	rm /data/data/LaserFocus_log_value2
+	rm /data/data/LaserFocus_log_value3
+	rm /data/data/LaserFocus_log_value4
+	rm /data/data/LaserFocus_log_value5
+	rm /data/data/LaserFocus_log_value6
+	rm /data/data/LaserFocus_log_value7
+	rm /data/data/LaserFocus_log_value8
+	rm /data/data/LaserFocus_log_value9
+	rm /data/data/LaserFocus_log_value10
+	rm /data/data/LaserFocus_value_check
+
+
+	symlink /system/bin/LaserFocus_CalStart /data/data/LaserFocus_CalStart
+	#symlink /proc/driver/LaserFocus_CalGetInputData /data/data/LaserFocus_CalGetInputData
+	symlink /proc/driver/LaserFocus_log_value1 /data/data/LaserFocus_log_value1
+	symlink /proc/driver/LaserFocus_log_value2 /data/data/LaserFocus_log_value2
+	symlink /proc/driver/LaserFocus_log_value3 /data/data/LaserFocus_log_value3
+	symlink /proc/driver/LaserFocus_log_value4 /data/data/LaserFocus_log_value4
+	symlink /proc/driver/LaserFocus_log_value5 /data/data/LaserFocus_log_value5
+	symlink /proc/driver/LaserFocus_log_value6 /data/data/LaserFocus_log_value6
+	symlink /proc/driver/LaserFocus_log_value7 /data/data/LaserFocus_log_value7
+	symlink /proc/driver/LaserFocus_log_value8 /data/data/LaserFocus_log_value8
+	symlink /proc/driver/LaserFocus_log_value9 /data/data/LaserFocus_log_value9
+	symlink /proc/driver/LaserFocus_log_value10 /data/data/LaserFocus_log_value10
+	symlink /proc/driver/LaserFocus_value_check /data/data/LaserFocus_value_check
+
+
+
+	chmod 0660 /data/data/LaserFocus_CalStart
+	#chmod 0660 /data/data/LaserFocus_CalGetInputData
+	chmod 0660 /data/data/LaserFocus_log_value1
+	chmod 0660 /data/data/LaserFocus_log_value2
+	chmod 0660 /data/data/LaserFocus_log_value3
+	chmod 0660 /data/data/LaserFocus_log_value4
+	chmod 0660 /data/data/LaserFocus_log_value5
+	chmod 0660 /data/data/LaserFocus_log_value6
+	chmod 0660 /data/data/LaserFocus_log_value7
+	chmod 0660 /data/data/LaserFocus_log_value8
+	chmod 0660 /data/data/LaserFocus_log_value9
+	chmod 0660 /data/data/LaserFocus_log_value10
+	chmod 0660 /data/data/LaserFocus_value_check
+
+
+	chown system shell /data/data/LaserFocus_CalStar
+	#chown system shell /data/data/LaserFocus_CalGetInputData
+	chown system shell /data/data/LaserFocus_log_value1
+	chown system shell /data/data/LaserFocus_log_value2
+	chown system shell /data/data/LaserFocus_log_value3
+	chown system shell /data/data/LaserFocus_log_value4
+	chown system shell /data/data/LaserFocus_log_value5
+	chown system shell /data/data/LaserFocus_log_value6
+	chown system shell /data/data/LaserFocus_log_value7
+	chown system shell /data/data/LaserFocus_log_value8
+	chown system shell /data/data/LaserFocus_log_value9
+	chown system shell /data/data/LaserFocus_log_value10
+	chown system shell /data/data/LaserFocus_value_check
+
+#"Copy Laser calibration data to factory partition in user device"
+on property:debug.asus.setfactorydata=1
+    mount ext4 /dev/block/bootdevice/by-name/factory /factory remount rw nosuid nodev barrier=1 noauto_da_alloc
+    copy /mnt/sdcard/laura_cal_data.txt /factory/laura_cal_data.txt
+    copy /mnt/sdcard/olivia_variety_data.txt /factory/olivia_variety_data.txt
+    chown system shell /factory/laura_cal_data.txt
+    chown system shell /factory/olivia_variety_data.txt
+    chmod 0660 /factory/laura_cal_datatxt
+    chmod 0660 /factory/olivia_variety_data.txt
+    #rm /mnt/sdcard/laura_cal_data.txt
+    #rm /mnt/sdcard/olivia_variety_data.txt
+    write /factory/LaserFocus_CSC_Calibration.txt  "Calibration by CSC"
+    mount ext4 /dev/block/bootdevice/by-name/factory /factory remount ro nosuid nodev barrier=1 noauto_da_alloc
+
+# ASUS_BSP ---
