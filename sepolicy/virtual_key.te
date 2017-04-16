@@ -1,0 +1,4 @@
+type proc_keypad_mode, file_type;
+
+allow system_app proc_keypad_mode:file { write open getattr };
+allow system_server proc_keypad_mode:file { write open getattr read };
