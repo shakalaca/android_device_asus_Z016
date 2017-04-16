@@ -324,20 +324,20 @@ framework/com.qualcomm.location.vzw_library.jar
 framework/izat.xt.srv.jar
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
-lib/libloc_core.so
-lib/libloc_eng.so
-lib/libloc_pla.so
-lib/libloc_stub.so
-lib/libgps.utils.so
-lib/libgnsspps.so
+#lib/libloc_core.so
+#lib/libloc_eng.so
+#lib/libloc_pla.so
+#lib/libloc_stub.so
+#lib/libgps.utils.so
+#lib/libgnsspps.so
 lib64/libloc_api_v02.so
 lib64/libloc_ds_api.so
-lib64/libloc_core.so
-lib64/libloc_eng.so
-lib64/libloc_pla.so
-lib64/libloc_stub.so
-lib64/libgps.utils.so
-lib64/libgnsspps.so
+#lib64/libloc_core.so
+#lib64/libloc_eng.so
+#lib64/libloc_pla.so
+#lib64/libloc_stub.so
+#lib64/libgps.utils.so
+#lib64/libgnsspps.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
@@ -800,8 +800,8 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.oem.so
 vendor/lib64/sensors.ssc.so
-lib64/hw/sensors.msm8996.so
-lib/hw/sensors.msm8996.so
+#lib64/hw/sensors.msm8996.so
+#lib/hw/sensors.msm8996.so
 
 # Thermal
 vendor/bin/thermal-engine
