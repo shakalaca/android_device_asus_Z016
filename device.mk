@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     bspcapability \
     Snap \
-    libshim_camera
+#    libshim_camera
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/s5k2l7_8953_chromatix.xml:system/etc/camera/s5k2l7_8953_chromatix.xml \
