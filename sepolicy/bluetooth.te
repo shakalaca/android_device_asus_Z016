@@ -1,3 +1,4 @@
 allow qti_init_shell bluetooth_loader_exec:file { read open };
 allow bluetooth factory_file:dir { search };
-allow vold proc_bluetooth_writable:dir { read };
+allow bluetooth factory_file:file { read };
+allow vold proc_bluetooth_writable:dir { read open };

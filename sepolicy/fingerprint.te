@@ -30,3 +30,5 @@ allow fingerprintd vfmService:process { signull };
 allow fingerprintd fp_device:dir { search };
 allow fingerprintd fp_device:fifo_file { write open read lock };
 allow fingerprintd tee_device:chr_file { read write open ioctl };
+
+allow system_app fingerprintd:binder { call };
