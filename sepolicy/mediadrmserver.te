@@ -1,0 +1,1 @@
+allow mediadrmserver factory_file:dir { search };

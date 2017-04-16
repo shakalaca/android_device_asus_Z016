@@ -19,4 +19,8 @@ allow cameraserver system_file:file { lock };
 allow cameraserver proc_asus_flash:file { read write open };
 allow cameraserver dit_data_file:dir { search };
 allow cameraserver dit_data_file:sock_file { write };
-allow cameraserver proc_laser_focus:file { read write };
+allow cameraserver proc_laser_focus:file { read write open getattr };
+allow cameraserver factory_file:dir { search };
+allow cameraserver factory_file:file { read };
+
+allow cameraserver mm-qcamerad:unix_stream_socket { connectto };
