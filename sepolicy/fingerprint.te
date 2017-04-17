@@ -12,10 +12,10 @@ binder_use(vfmService)
 
 allow vfmService tee_device:chr_file { read write open ioctl };
 allow vfmService uhid_device:chr_file { read write open ioctl };
-allow vfmService fp_device:dir { add_name write setattr search };
+allow vfmService fp_device:dir { add_name write setattr search remove_name };
 allow vfmService fp_device:file { lock create read write open };
 allow vfmService fp_device:chr_file { ioctl read write open };
-allow vfmService fp_device:fifo_file { create read open write lock };
+allow vfmService fp_device:fifo_file { create read open write lock unlink };
 allow vfmService fp_data_file:dir { search write add_name setattr remove_name read open };
 allow vfmService fp_data_file:file { open read write getattr create lock unlink };
 allow vfmService init:unix_stream_socket { connectto };

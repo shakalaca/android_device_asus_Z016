@@ -16,11 +16,11 @@ allow mm-qcamerad customize_prop:file { read open getattr };
 allow mm-qcamerad proc_laser_focus:file { read open getattr };
 
 allow cameraserver system_file:file { lock };
-allow cameraserver proc_asus_flash:file { read write open };
+allow cameraserver proc_asus_flash:file { read write open getattr };
 allow cameraserver dit_data_file:dir { search };
 allow cameraserver dit_data_file:sock_file { write };
 allow cameraserver proc_laser_focus:file { read write open getattr };
 allow cameraserver factory_file:dir { search };
-allow cameraserver factory_file:file { read };
+allow cameraserver factory_file:file { read open };
 
 allow cameraserver mm-qcamerad:unix_stream_socket { connectto };

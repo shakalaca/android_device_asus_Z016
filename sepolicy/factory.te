@@ -6,3 +6,4 @@ allow init factory_file:dir { mounton };
 allow qti_init_shell factory_file:file { read open getattr };
 allow qti_init_shell factory_file:dir { search };
 allow kernel factory_file:dir { search };
+allow kernel factory_file:file { read open getattr };
