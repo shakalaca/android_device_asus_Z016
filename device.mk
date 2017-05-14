@@ -89,9 +89,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    tinymix \
-#    audio_amplifier.msm8996
+    tinymix
 
 AUDIO_CAF_DIR := $(TOPDIR)hardware/qcom/audio-caf/msm8996/configs/msm8996
 
@@ -132,6 +130,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
+    antradio_app \
+    libvolumelistener \
     libantradio
 
 PRODUCT_COPY_FILES += \
