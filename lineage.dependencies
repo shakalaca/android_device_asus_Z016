@@ -1,7 +1,9 @@
 [
   {
-    "repository": "android_kernel_asus_zs570kl",
-    "target_path": "kernel/asus/Z016"
+    "remote": "github",
+    "repository": "shakalaca/android_kernel_asus_zs570kl",
+    "target_path": "kernel/asus/Z016",
+    "branch": "android-7.0"
   },
   {
     "repository": "android_vendor_nxp-nfc_opensource_frameworks",
