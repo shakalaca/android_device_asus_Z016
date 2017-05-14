@@ -252,6 +252,7 @@ etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
+framework/tcmiface.jar
 -priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/lib/libdpmctmgr.so
 vendor/lib/libdpmfdmgr.so
@@ -940,12 +941,12 @@ etc/firmware/slpi.b15
 etc/firmware/slpi.mbn
 etc/firmware/slpi.mdt
 
-lib64/libsdmcore.so
-lib64/libsdmutils.so
-lib/libsdmcore.so
-lib/libsdmutils.so
-lib/hw/hwcomposer.msm8996.so
-lib64/hw/hwcomposer.msm8996.so
+#lib64/libsdmcore.so
+#lib64/libsdmutils.so
+#lib/libsdmcore.so
+#lib/libsdmutils.so
+#lib/hw/hwcomposer.msm8996.so
+#lib64/hw/hwcomposer.msm8996.so
 
 -vendor/app/CABLService/CABLService.apk
 -vendor/app/RIDLClient/RIDLClient.apk

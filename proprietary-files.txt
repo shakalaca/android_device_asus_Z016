@@ -1342,14 +1342,13 @@ lib64/libcctapi.so
 bin/dhcp_lease_evt.sh
 
 # misc jars
-framework/tcmiface.jar
 #framework/com.asus.fm.jar
 
 # misc executables (init)
 bin/VerifyVouchers
 #bin/diag_mdlog
 bin/fstman
-bin/port-bridge
+#bin/port-bridge
 bin/qcom-system-daemon
 #bin/ATFWD-daemon
 bin/HDCP_Validate
