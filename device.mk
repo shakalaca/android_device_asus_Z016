@@ -123,6 +123,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(AUDIO_CAF_DIR)/listen_platform_info.xml:system/etc/listen_platform_info.xml
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libfmjni \
+    libqcomfm_jni \
+    libfm-hci \
+    fm_helium \
+    qcom.fmradio \
+    fmhal_service
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \

@@ -1259,12 +1259,6 @@ etc/firmware/fingerprint.b06
 etc/firmware/fingerprint.mbn
 etc/firmware/fingerprint.mdt
 
-# fm
-lib64/libfmjni.so
-lib64/libqcomfm_jni.so
-lib/libfmjni.so
-lib/libqcomfm_jni.so
-
 # t2l
 bin/t2l_hit
 lib/ADSetting.so
@@ -1348,8 +1342,8 @@ lib64/libcctapi.so
 bin/dhcp_lease_evt.sh
 
 # misc jars
-framework/com.asus.fm.jar
 framework/tcmiface.jar
+#framework/com.asus.fm.jar
 
 # misc executables (init)
 bin/VerifyVouchers

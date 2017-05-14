@@ -961,7 +961,6 @@ framework/WfdCommon.jar
 #framework/com.quicinc.wbcservice.jar
 framework/oem-services.jar
 framework/qcmediaplayer.jar
-framework/qcom.fmradio.jar
 framework/qmapbridge.jar
 framework/rcs_service_aidl.jar
 framework/rcs_service_api.jar
@@ -974,7 +973,6 @@ etc/init.qcom.bt.sh
 etc/init.qcom.coex.sh
 etc/init.qcom.debug.sh
 etc/init.qcom.efs.sync.sh
-etc/init.qcom.fm.sh
 etc/init.qcom.post_boot.sh
 etc/init.qcom.sdio.sh
 etc/init.qcom.uicc.sh
@@ -1107,6 +1105,14 @@ vendor/lib64/libmdtp.so
 vendor/lib/libmdtp_crypto.so
 vendor/lib/libmdtpdemojni.so
 vendor/lib/libmdtp.so
+
+# fm
+#lib64/libfmjni.so
+#lib64/libqcomfm_jni.so
+#lib/libfmjni.so
+#lib/libqcomfm_jni.so
+#framework/qcom.fmradio.jar
+etc/init.qcom.fm.sh
 
 # Wifi
 vendor/lib/libwfdavenhancements.so
