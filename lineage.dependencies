@@ -1,5 +1,9 @@
 [
   {
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  },
+  {
     "remote": "github",
     "repository": "shakalaca/android_kernel_asus_zs570kl",
     "target_path": "kernel/asus/Z016",
