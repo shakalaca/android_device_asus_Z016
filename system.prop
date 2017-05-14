@@ -20,6 +20,9 @@ DEVICE_PROVISIONED=1
 # Start in global mode
 ro.telephony.default_network=22,22
 
+# Set network type value
+ro.asus.network.types=9
+
 # CDMA-SMS option force_dc_on
 persist.radio.force_on_dc=true
 
@@ -215,7 +218,11 @@ wifi.version.driver=9.83.17
 bt.version.driver=1.41.0078
 ro.bt.bdaddr_path=/factory/bt_nv.bin
 persist.cne.rat.wlan.chip.oem=nqc
+persist.asus.alwayson.dim=65
 persist.nfc.smartcard.config=SIM1
+ro.asus.vibration_intensity=1
+ro.build.app.version=070010902_201611140003
+ro.asus.ui=1.0
 ro.ril.ecclist=112,911
 ro.com.google.clientidbase=android-asus-tpin
 ro.com.google.clientidbase.ms=android-asus-tpin
@@ -268,13 +275,9 @@ ro.config.alarm_alert=BusyBugs.ogg
 ro.additionalbutton.operation=0
 ro.setupwizard.mode=OPTIONAL
 ro.com.google.gmsversion=7.0_r5
+ro.asus.disable_cmcc_nt=0
 persist.sys.modem.restart=28
 ro.mdtp.package_name2=com.qualcomm.qti.securemsm.mdtp.MdtpDemo
+ro.product.carrier=US-ASUS_Z016D-WW_Z016D
+ro.build.csc.version=WW_ZS570KL_5.14.44.2096_20170331
 
-# Set network type value
-ro.asus.network.types=9
-persist.asus.alwayson.dim=65
-ro.asus.vibration_intensity=1
-ro.build.app.version=070010902_201611140003
-ro.asus.ui=1.0
-ro.asus.disable_cmcc_nt=0
