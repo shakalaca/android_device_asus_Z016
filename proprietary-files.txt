@@ -189,6 +189,8 @@ lib/libarcsoft_nighthawk.so
 lib/libarcsoft_panorama_burstcapture.so
 lib/libarcsoft_piczoom.so
 lib/libarcsoft_videostabilizer.so
+lib/libarcsoft_dualcam_refocus.so
+lib/libarcsoft_dualcam_optical_zoom.so
 lib/libsarcsoftface.so
 lib/libsphere3.so
 lib/libmpbase.so
@@ -1242,6 +1244,7 @@ lib/libxditk_ditArchLIB.so
 lib/libxditk_ditBSP.so
 lib/libxditk_ditBSP_JNI.so
 lib/libAsusRGBSensorHAL.so
+lib/libStereoRectification.so
 
 # Fingerprint sensor
 bin/qfp-daemon
