@@ -1259,10 +1259,6 @@ etc/firmware/fingerprint.b06
 etc/firmware/fingerprint.mbn
 etc/firmware/fingerprint.mdt
 
-# Sensors
-etc/sensors/hals.conf
-etc/sensors/sensor_def_qcomdev.conf
-
 # fm
 lib64/libfmjni.so
 lib64/libqcomfm_jni.so
