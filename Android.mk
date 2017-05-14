@@ -40,6 +40,22 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
+MDTP_FIRMWARE_SYMLINKS := $(TARGET_OUT)/etc/firmware
+$(MDTP_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Linking MDTP firmware"
+	@mkdir -p $@
+	@rm -f $@/mdtp.*
+	$(hide) ln -sf /firmware/image/mdtp.b00 $@/mdtp.b00
+	$(hide) ln -sf /firmware/image/mdtp.b01 $@/mdtp.b01
+	$(hide) ln -sf /firmware/image/mdtp.b02 $@/mdtp.b02
+	$(hide) ln -sf /firmware/image/mdtp.b03 $@/mdtp.b03
+	$(hide) ln -sf /firmware/image/mdtp.b04 $@/mdtp.b04
+	$(hide) ln -sf /firmware/image/mdtp.b05 $@/mdtp.b05
+	$(hide) ln -sf /firmware/image/mdtp.b06 $@/mdtp.b06
+	$(hide) ln -sf /firmware/image/mdtp.mdt $@/mdtp.mdt
+
+ALL_DEFAULT_INSTALLED_MODULES += $(MDTP_FIRMWARE_SYMLINKS)
+
 RFS_APQ_GNSS_SYMLINKS := $(TARGET_OUT)/rfs/apq/gnss/
 $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS APQ GNSS folder structure: $@"
