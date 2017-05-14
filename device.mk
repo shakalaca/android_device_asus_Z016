@@ -365,8 +365,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/bcmdhd/wpa_supplicant_overlay.conf:system/etc/wifi/bcmdhd/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/bcmdhd/hostapd.conf:system/etc/wifi/bcmdhd/hostapd.conf \
     $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    $(LOCAL_PATH)/configs/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+    fstman \
+    fstman.ini
 
 # Thermal
 PRODUCT_COPY_FILES += \
