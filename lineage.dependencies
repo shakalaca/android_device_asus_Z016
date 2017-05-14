@@ -10,6 +10,11 @@
     "branch": "android-7.0"
   },
   {
+    "remote": "github",
+    "repository": "shakalaca/android_hardware_qcom_audio-caf_msm8996_asus",
+    "target_path": "hardware/qcom/audio-caf/msm8996/legacy"
+  },
+  {
     "repository": "android_vendor_nxp-nfc_opensource_frameworks",
     "target_path": "vendor/nxp-nfc/opensource/frameworks"
   },
