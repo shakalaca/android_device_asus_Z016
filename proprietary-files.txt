@@ -1350,7 +1350,7 @@ bin/dhcp_lease_evt.sh
 # misc executables (init)
 bin/VerifyVouchers
 #bin/diag_mdlog
-bin/fstman
+#bin/fstman
 #bin/port-bridge
 bin/qcom-system-daemon
 #bin/ATFWD-daemon
