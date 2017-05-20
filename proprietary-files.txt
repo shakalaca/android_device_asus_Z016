@@ -1301,6 +1301,12 @@ etc/usf/version.txt
 etc/usf_post_boot.sh
 etc/usf_settings.sh
 
+# Splendid
+bin/GammaSetting
+bin/HSVSetting
+-app/AsusSplendidCommandAgent/AsusSplendidCommandAgent.apk
+#-priv-app/AsusSplendid/AsusSplendid.apk
+
 # misc libs
 lib/libjpegHWCompress.so
 lib/libjpeggifcodec.so
@@ -1369,8 +1375,6 @@ bin/seempd
 
 # misc executables
 bin/climax
-bin/GammaSetting
-bin/HSVSetting
 bin/PktRspTest
 bin/Proximity_calib
 bin/Proximity_tester
