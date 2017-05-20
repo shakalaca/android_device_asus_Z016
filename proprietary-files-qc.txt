@@ -195,7 +195,7 @@ etc/firmware/fw_bcmdhd.bin
 etc/firmware/fw_bcmdhd_apsta.bin
 etc/firmware/BCM4359C0_003.001.006.0048.0078.hcd
 #vendor/lib/libbt-vendor.so
-v#endor/lib64/libbt-vendor.so
+#vendor/lib64/libbt-vendor.so
 
 # CNE
 bin/cnd
