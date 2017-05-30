@@ -1,4 +1,4 @@
-package com.corner23.android.flipcovershell;
+package com.corner23.android.flipcoverwrapper;
 
 import android.app.Service;
 import android.content.ComponentName;

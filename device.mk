@@ -524,7 +524,7 @@ PRODUCT_PACKAGES += \
 
 # FlipCover
 PRODUCT_PACKAGES += \
-    FlipCoverShell
+    FlipCoverWrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/asus.software.cover3_feature_1.xml:/system/etc/permissions/asus.software.cover3_feature_1.xml \
