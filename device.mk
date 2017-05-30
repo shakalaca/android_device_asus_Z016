@@ -532,4 +532,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/asus.hardware.transcover.xml:/system/etc/permissions/asus.hardware.transcover.xml \
     $(LOCAL_PATH)/configs/permissions/asus.hardware.transcover_info.xml:/system/etc/permissions/asus.hardware.transcover_info.xml
 
+# Doze
+PRODUCT_PACKAGES += \
+   ZenfoneDoze
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
