@@ -44,16 +44,16 @@ void vendor_load_properties()
     property_set("ro.build.product", "ZS570KL");
     property_set("ro.product.model", "ASUS_Z016D");
     property_set("ro.product.name", "WW_Z016");
-    property_set("ro.build.description", "zs570kl-user 7.0 NRD90M WW_user_5.14.44.2096_20170331 release-keys");
+    property_set("ro.build.description", "zs570kl-user 7.0 NRD90M WW_user_5.14.44.2212_20170424 release-keys");
     if (prj_id == 246) { // S820
-        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016:7.0/NRD90M/WW_user_5.14.44.2096_20170331:user/release-keys");
+        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
         property_set("ro.product.device", "Z016");
         property_set("ro.product.carrier", "US-ASUS_Z016D-WW_Z016D");
-        property_set("ro.build.csc.version", "WW_ZS570KL_5.14.44.2096_20170331");
+        property_set("ro.build.csc.version", "WW_ZS570KL_5.14.44.2212_20170424");
     } else { // 305, S821
-        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016_1:7.0/NRD90M/WW_user_5.14.44.2096_20170331:user/release-keys");
+        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016_1:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
         property_set("ro.product.device", "Z016_1");
         property_set("ro.product.carrier", "US-ASUS_Z016PRO-WW_Z016D");
-        property_set("ro.build.csc.version", "WW_ZS570KLPRO_5.14.44.2096_20170331");
+        property_set("ro.build.csc.version", "WW_ZS570KLPRO_5.14.44.2212_20170424");
     }
 }

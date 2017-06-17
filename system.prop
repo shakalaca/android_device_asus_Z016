@@ -214,7 +214,7 @@ ro.build.servaddr=1
 #
 ro.panel.mountflip=3
 ro.sf.lcd_density=480
-wifi.version.driver=9.83.17
+wifi.version.driver=9.83.20
 bt.version.driver=1.41.0078
 ro.bt.bdaddr_path=/factory/bt_nv.bin
 persist.cne.rat.wlan.chip.oem=nqc
@@ -278,6 +278,3 @@ ro.com.google.gmsversion=7.0_r5
 ro.asus.disable_cmcc_nt=0
 persist.sys.modem.restart=28
 ro.mdtp.package_name2=com.qualcomm.qti.securemsm.mdtp.MdtpDemo
-ro.product.carrier=US-ASUS_Z016D-WW_Z016D
-ro.build.csc.version=WW_ZS570KL_5.14.44.2096_20170331
-
