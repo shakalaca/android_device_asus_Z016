@@ -1,0 +1,4 @@
+type sysfs_vibrator, fs_type, sysfs_type;
+
+allow system_app sysfs_vibrator:file { write open getattr };
+allow system_server sysfs_vibrator:file { write open getattr read };

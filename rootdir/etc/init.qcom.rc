@@ -199,6 +199,9 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
+    # Permission for Vibrator
+    chown system system /sys/devices/virtual/timed_output/vibrator/vmax
+
     # Permissions for Touch Glove Mode
     chown system system /sys/bus/i2c/devices/i2c-12/12-0020/input/input2/glovemode
 
