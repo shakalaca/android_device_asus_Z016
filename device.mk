@@ -546,4 +546,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    ZenfoneDoze
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_msm8996
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
