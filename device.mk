@@ -378,6 +378,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/wifi/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/configs/wifi/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
+
 PRODUCT_PACKAGES += \
     fstman \
     fstman.ini
