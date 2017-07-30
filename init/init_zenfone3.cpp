@@ -27,10 +27,24 @@
 
 #include <stdlib.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
+
+void property_override(char const prop[], char const value[])
+{
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
 
 void vendor_load_properties()
 {
@@ -40,20 +54,19 @@ void vendor_load_properties()
     fp = fopen("/sys/devices/soc0/soc_id", "r");
     fscanf(fp, "%d", &prj_id);
     fclose(fp);
-    
-    property_set("ro.build.product", "ZS570KL");
-    property_set("ro.product.model", "ASUS_Z016D");
-    property_set("ro.product.name", "WW_Z016");
-    property_set("ro.build.description", "zs570kl-user 7.0 NRD90M WW_user_5.14.44.2212_20170424 release-keys");
+    property_override("ro.build.product", "ZS570KL");
+    property_override("ro.product.model", "ASUS_Z016D");
+    property_override("ro.product.name", "WW_Z016");
+    property_override("ro.build.description", "zs570kl-user 7.0 NRD90M WW_user_5.14.44.2212_20170424 release-keys");
     if (prj_id == 246) { // S820
-        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
-        property_set("ro.product.device", "Z016");
-        property_set("ro.product.carrier", "US-ASUS_Z016D-WW_Z016D");
+        property_override("ro.build.fingerprint", "asus/WW_Z016/Z016:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
+        property_override("ro.product.device", "Z016");
+        property_override("ro.product.carrier", "US-ASUS_Z016D-WW_Z016D");
         property_set("ro.build.csc.version", "WW_ZS570KL_5.14.44.2212_20170424");
     } else { // 305, S821
-        property_set("ro.build.fingerprint", "asus/WW_Z016/Z016_1:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
-        property_set("ro.product.device", "Z016_1");
-        property_set("ro.product.carrier", "US-ASUS_Z016PRO-WW_Z016D");
+        property_override("ro.build.fingerprint", "asus/WW_Z016/Z016_1:7.0/NRD90M/WW_user_5.14.44.2212_20170424:user/release-keys");
+        property_override("ro.product.device", "Z016_1");
+        property_override("ro.product.carrier", "US-ASUS_Z016PRO-WW_Z016D");
         property_set("ro.build.csc.version", "WW_ZS570KLPRO_5.14.44.2212_20170424");
     }
 }
