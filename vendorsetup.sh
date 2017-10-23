@@ -1,4 +1,4 @@
-add_lunch_combo omni_zs570kl-userdebug
-add_lunch_combo omni_zs570kl-eng
-add_lunch_combo full_zs570kl-userdebug
-add_lunch_combo full_zs570kl-eng
+add_lunch_combo omni_Z016-userdebug
+add_lunch_combo omni_Z016-eng
+add_lunch_combo full_Z016-userdebug
+add_lunch_combo full_Z016-eng

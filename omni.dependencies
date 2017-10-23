@@ -2,8 +2,8 @@
   {
     "remote": "github",
     "repository": "shakalaca/android_kernel_asus_zs570kl",
-    "revision": "android-7.0",
-    "target_path": "kernel/asus/zs570kl"
+    "revision": "twrp",
+    "target_path": "kernel/asus/Z016"
   },
   {
     "remote": "github",

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),zs570kl)
+ifeq ($(TARGET_DEVICE),Z016)
 
 LOCAL_PATH := $(call my-dir)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))

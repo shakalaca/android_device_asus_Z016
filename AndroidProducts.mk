@@ -1,3 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_zs570kl.mk \
-    $(LOCAL_DIR)/omni_zs570kl.mk
+    $(LOCAL_DIR)/full_Z016.mk \
+    $(LOCAL_DIR)/omni_Z016.mk

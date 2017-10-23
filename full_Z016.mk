@@ -22,13 +22,13 @@
 #
 
 # Inherit specific vendor tree
-$(call inherit-product-if-exists, vendor/asus/zs570kl/zs570kl-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/Z016/Z016-vendor.mk)
 
 # Inherit from m8
-$(call inherit-product, device/asus/zs570kl/device.mk)
+$(call inherit-product, device/asus/Z016/device.mk)
 
-PRODUCT_NAME := full_zs570kl
-PRODUCT_DEVICE := zs570kl
+PRODUCT_NAME := full_Z016
+PRODUCT_DEVICE := Z016
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := asus
-PRODUCT_MODEL := ASUS_Z016
+PRODUCT_MODEL := ASUS_Z016D

@@ -1,3 +1,4 @@
 ro.build.model=ASUS_Z016
+# for stock ROM
 ro.product.device=Z016
 ro.build.asus.sku=WW
